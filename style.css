@@ -1,0 +1,56 @@
+.container{
+    max-width: 350px;
+    margin: 30px auto;
+    margin-top: 150px;
+    background-color: #72bcb9;
+    padding:40px;
+    border-radius: 8px;
+    justify-content: center;
+    text-align: center;
+
+}
+body{
+    background-color: teal;
+}
+.container h2{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.container p{
+    font-size: 20px;
+}
+input[type="date"]{
+    height: 25px;
+    width: 150px;
+    border-radius: 3px;
+}
+button{
+    padding: 1%;
+    border-radius: 3px;
+    background-color: rgb(40, 90, 125);
+    color: white;
+}
+button:hover{
+    background-color: rgb(7, 59, 94);
+}
+.con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+}
+.con .year,.month ,.days{
+    width: 100px;
+    text-align: center;
+    
+
+}
+.con p{
+    font-size: 40px;
+    font-weight: 500px;
+    color: blueviolet;
+}
+.con h5{
+    font-size: 15px;
+}

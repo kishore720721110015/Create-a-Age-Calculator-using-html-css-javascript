@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agecalculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Age Calculator</h2>
+        <p>Enter your Date of Birth</p>
+        <div class="inputvalues">
+            <input type="date" id="dob">
+            <button id="btn" onclick="calculateage()">Calculate</button>
+        </div>
+        <div class="con">
+            <div class="year">
+                <p id="year">_</p>
+                <h5>Year</h5>
+            </div>
+            <div class="month">
+                <p id="month">_</p>
+                <h5>Month</h5>
+            </div>
+            <div class="days">
+                <p id="days">_</p>
+                <h5>Days</h5>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function calculateage(){
+        const dob=new Date(document.getElementById("dob").value);
+
+        const ageinms=Date.now()-dob.getTime();
+        const agedate=new Date(ageinms);
+        const age=Math.abs(agedate.getUTCFullYear()-1970);
+        const months=agedate.getUTCMonth();
+        const days=agedate.getUTCDate()-1;
+
+        document.getElementById("year").innerHTML=age;
+        document.getElementById("month").innerHTML=months;
+        document.getElementById("days").innerHTML=days;
+        }
+</script>
+</html>
